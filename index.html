@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="stylesheet.css" />
+    <title>Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!--Video Loop-->
+    <div class="embed-responsive embed-responsive-21by9">
+        <video autoplay loop width="100%" height="100%">
+            <source src="portfolioimages/PortfolioVideoText.mp4" type="video/mp4">
+
+        </video>
+    </div>
+
+    <!--Carousel-->
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" data-pause="false">
+        <div class="carousel-inner" role="listbox">
+
+            <div class="carousel-item active">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-img">
+                            <a class="fp-f-cl py-0 nav-link-b" href="ZhangPortfolioArtPortfolio.html">
+                                <img src="portfolioimages/HomeArtB.png" class="d-block w-100 image-fluid" alt="Art slide" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-img">
+                            <a class="fp-f-cl nav-link-b" href="ZPortfolioFashion.html">
+                                <img src="portfolioimages/HomeFashion.png" class="d-block w-100 image-fluid" alt="Fashion slide" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-img">
+                            <a class="fp-f-cl nav-link-b" href="ZPortfolioDesign.html">
+                                <img src="portfolioimages/HomeDesign.png " class="d-block w-100 image-fluid" alt="Design slide" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <a class="carousel-control-prev bg-transparent" href="#carouselExampleControls" role="button" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only"></span>
+        </a>
+        <a class="carousel-control-next bg-transparent" href="#carouselExampleControls" role="button" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only"></span>
+        </a>
+    </div>
+
+
+
+
+    <!--About-->
+    <section class="container-fluid hless ">
+        <div class="row ">
+            <div class="col-lg-6 col-sm-12 ms-lg-5 ">
+                <div class="about-left-text text-center">
+                    <p>
+                        ABOUT
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-5 col-sm-12 col-xs-12 overG ms-lg-2 text-xs text-sm" style="height: 30vw; min-height:395px ">
+                <!--350 min-->
+                <div class="about-right-text ft ">
+                    <p>
+                        Amelia Zhang is a Chinese student studying at Otago Girls’ High School. Her passion for the arts of fashion and design began at the age of 11 and her interest in illustration started ever since she could remember. Entranced by the idea of turning abstract sketches into real life creations, her ambition and enthusiasm has only grown since her first encounter with a sewing machine. In July of 2022, Zhang’s entry for the Hokonui Fashion Design Awards was featured on the Hokonui Fashion Design Awards runway show. Receiving a Merit award, this placed her garment in the top five of her section; Glamour (School). Zhang’s intertwining of Chinese and Western culture remains frequent in her work and she is at her early stages of discovering her sense of style in fashion design.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!--Javascript for carousel-->
+    <script>let items = document.querySelectorAll('.carousel .carousel-item')
+
+        items.forEach((el) => {
+            const minPerSlide = 4
+            let next = el.nextElementSibling
+            for (var i = 1; i < minPerSlide; i++) {
+                if (!next) {
+                    next = items[0]
+                }
+                let cloneChild = next.cloneNode(true)
+                el.appendChild(cloneChild.children[0])
+                next = next.nextElementSibling
+            }
+        })</script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+
+
+
+
+
+</html>
